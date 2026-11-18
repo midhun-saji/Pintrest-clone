@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <nav class="flex items-center gap-4 px-6 py-3">
+
+            <!-- Logo -->
+
+
+            <a href="#home" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-200">
+                <i class="fa-brands fa-pinterest text-red-600 text-3xl"></i>
+            </a>
+
+            <!-- Search Bar -->
+
+            <div class="relative flex-1">
+
+                <!-- Search Icon  -->
+
+                <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                <input type="search" placeholder="Search for ideas"
+                    class="w-full bg-gray-100 rounded-full py-3 pl-14 pr-5 outline-none focus:ring-2 focus:ring-gray-300 focus:bg-white">
+            </div>
+
+            <!-- Sidebar -->
+
+            <aside
+                class="fixed top-0 left-0 h-screen w-20 bg-white border-r border-gray-200 flex flex-col items-center py-5">
+
+                <!-- Logo -->
+                <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 mb-10">
+                    <i class="fa-brands fa-pinterest text-red-600 text-4xl"></i>
+                </a>
+
+                <div class="flex flex-col items-center gap-6">
+
+                    <!-- Home -->
+                    <a href="./index.html"
+                        class="w-12 h-12 rounded-xl flex items-center justify-center hover:bg-gray-100">
+                        <i class="fa-solid fa-house text-xl"></i>
+                    </a>
+
+                    <!-- Explore -->
+                    <a href="#" class="w-12 h-12 rounded-xl flex items-center justify-center bg-black text-white">
+                        <i class="fa-regular fa-compass text-xl"></i>
+                    </a>
+
+                    <!-- Create -->
+                    <label class="cursor-pointer">
+                        <input name="sidebar" class="peer hidden">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center
+                        peer-checked:bg-black peer-checked:text-white
+                        hover:bg-gray-100">
+                            <a href="./index.html">
+                                <i class="fa-regular fa-square-plus text-xl"></i>
+                            </a>
+                        </div>
+                    </label>
+
+                    <!-- Notifications -->
+                    <label class="cursor-pointer">
+                        <input name="sidebar" class="peer hidden">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center
+                        peer-checked:bg-black peer-checked:text-white
+                        hover:bg-gray-100">
+                            <a href="./index.html">
+                                <i class="fa-regular fa-bell text-xl"></i>
+                            </a>
+                        </div>
+                    </label>
+
+                    <!-- Messages -->
+                    <label class="cursor-pointer">
+                        <input name="sidebar" class="peer hidden">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center
+                        peer-checked:bg-black peer-checked:text-white
+                        hover:bg-gray-100">
+                            <a href="./index.html">
+                                <i class="fa-regular fa-comment-dots text-xl"></i>
+                            </a>
+                        </div>
+                    </label>
+
+                </div>
+
+                <!-- Settings -->
+                <div class="mt-auto mb-5">
+                    <label class="cursor-pointer">
+                        <input name="sidebar" class="peer hidden">
+                        <div class="mt-auto mb-5">
+                            <a href="./index.html"
+                                class="w-12 h-12 rounded-xl hover:bg-gray-100 flex items-center justify-center">
+                                <i class="fa-solid fa-gear text-xl"></i>
+                            </a>
+                        </div>
+            </aside>
+
+            <div class="relative group">
+
+                <!-- Profile Image -->
+                <img src="https://i.pinimg.com/736x/c8/46/d9/c846d953f46894d53cfa48a55b138f45.jpg" alt="Profile"
+                    class="w-10 h-10 rounded-full cursor-pointer object-cover">
+
+                <!-- Name Popup -->
+                <div
+                    class="absolute right-0 top-12 hidden group-hover:block bg-white shadow-lg rounded-lg px-4 py-2 whitespace-nowrap z-50">
+                    <p class="font-semibold">Arun</p>
+                    <p class="text-sm text-gray-500">arun22@gmail.com</p>
+                </div>
+
+            </div>
+            <!-- Dropdown -->
+
+            <button class="w-8 h-8 rounded-full hover:bg-gray-200 flex items-center justify-center">
+                <i class="fa-solid fa-chevron-down text-gray-600"></i>
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- Gallery -->
+
+    <main class="max-w-7xl mx-auto p-5">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold">Explore</h1>
+            <p class="text-gray-500 mt-2">
+                Discover trending ideas, photography, fashion, travel, food, art, and more.
+            </p>
+        </div>
+
+        <div class="flex gap-3 overflow-x-auto mb-8 pb-2">
+            <button class="px-5 py-2 bg-black text-white rounded-full">All</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Art</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Nature</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Travel</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Fashion</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Food</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">Technology</button>
+            <button class="px-5 py-2 bg-gray-200 rounded-full hover:bg-gray-300">DIY</button>
+        </div>
+        <div class="columns-2 md:columns-3 lg:columns-5 gap-5">
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/550?random=12" class="rounded-2xl w-full" alt="random image 12">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/450?random=11" class="rounded-2xl w-full" alt="random image 11">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/500?random=10" class="rounded-2xl w-full" alt="random image 10">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/350?random=9" class="rounded-2xl w-full" alt="random image 9">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/600?random=8" class="rounded-2xl w-full" alt="random image 8">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/400?random=7" class="rounded-2xl w-full" alt="random image 7">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/550?random=6" class="rounded-2xl w-full" alt="random image 6">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/450?random=5" class="rounded-2xl w-full" alt="random image 5">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/600?random=4" class="rounded-2xl w-full" alt="random image 4">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/350?random=3" class="rounded-2xl w-full" alt="random image 3">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/500?random=2" class="rounded-2xl w-full" alt="random image 2">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/400?random=1" class="rounded-2xl w-full" alt="random image 1">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/400?random=21" class="rounded-2xl w-full" alt="random image 21">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/500?random=22" class="rounded-2xl w-full" alt="random image 22">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/350?random=23" class="rounded-2xl w-full" alt="random image 23">
+            </div>
+
+            <div class="mb-5 break-inside-avoid">
+                <img src="https://picsum.photos/300/600?random=24" class="rounded-2xl w-full" alt="random image 24">
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
